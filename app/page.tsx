@@ -248,13 +248,13 @@ function About() {
             className="space-y-6"
           >
             <p className="text-lg text-gray-700 leading-relaxed">
-              I'm a full-stack developer who loves turning complex problems into elegant, 
+              I&apos;m a full-stack developer who loves turning complex problems into elegant, 
               user-friendly solutions. My journey in software development spans across web 
               technologies, mobile app development, and data science.
             </p>
             <p className="text-lg text-gray-700 leading-relaxed">
               With expertise in JavaScript, Python, and modern frameworks like React and Flutter, 
-              I enjoy building applications that make a real impact. I'm always eager to learn 
+              I enjoy building applications that make a real impact. I&apos;m always eager to learn 
               new technologies and contribute to open-source projects.
             </p>
             
@@ -432,10 +432,10 @@ function Contact() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Let's Work Together
+            Let&apos;s Work Together
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Have a project in mind? I'd love to hear about it and discuss how we can bring your ideas to life.
+            Have a project in mind? I&apos;d love to hear about it and discuss how we can bring your ideas to life.
           </p>
         </motion.div>
 
