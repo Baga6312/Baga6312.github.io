@@ -2,16 +2,12 @@
 const nextConfig = {
   output: 'export',
   trailingSlash: true,
+  basePath: '/oussemabenayech.github.io',
+  assetPrefix: '/oussemabenayech.github.io',
   images: {
     unoptimized: true,
-  },
-  // This is crucial for GitHub Pages
-  basePath: '',
-  assetPrefix: '',
-  // Ensure proper file extensions
-  experimental: {
-    // Remove if using Next.js 14+
   }
 }
 
 module.exports = nextConfig
+/* force rebuild */
