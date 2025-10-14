@@ -8,7 +8,7 @@ if (isGithubActions) {
   basePath = `/${repo}`
 }
 
-module.exports = {
+export default {
   assetPrefix: assetPrefix,
   basePath: basePath,
 }
