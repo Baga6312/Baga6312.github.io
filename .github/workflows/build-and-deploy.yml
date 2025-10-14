@@ -31,8 +31,8 @@ jobs:
       
       - name: Build and Export
         run: |
+	  npm ci 
           npm run build
-          npm run export
           touch out/.nojekyll
       
       - name: Upload artifact
