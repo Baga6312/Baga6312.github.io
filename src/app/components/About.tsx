@@ -1,17 +1,17 @@
 export default function About() {
   return (
-    <section className="bg-light-navy p-8 rounded-lg shadow-md">
+    <section id="about" className="bg-light-navy p-8 rounded-lg shadow-md">
       <div className="container mx-auto my-16">
         <div className="max-w-4xl mx-auto">
           {/* About Me Section */}
           <div className="mb-12">
             <h2 className="text-3xl font-bold lg:text-4xl text-white">About Me</h2>
             <p className="mt-4 text-lg leading-relaxed text-gray-300">
-              Hello! I&apos;m Fedi Bellakhel, a passionate software developer who enjoys
-              building beautiful and functional applications. With expertise in fields like AI
-              and web development, I thrive on solving complex problems and continuously
-              learning to enhance my craft. I&aposm excited about exploring artificial intelligence (AI)
-              and advancing my skills in software development.
+              Hello! I'm Oussema , a passionate individual about all open-source things 
+              and part time hacker looking for bug bounty programs to make the web a safer place.
+              I enjoy building functional applications  and solve complex problems. 
+              With expertise in Cyber Security and web development, I thrive on continuously
+              learning to enhance my craft .
             </p>
           </div>
 
@@ -32,17 +32,9 @@ export default function About() {
         </p>
       </div>
     </section>
-  
-
-
-
-          </div>
-
-
-          
+            </div>
           </div>
         </div>
-      
     </section>
   );
 }
