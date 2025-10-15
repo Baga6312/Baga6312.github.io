@@ -2,7 +2,7 @@ import { Button } from '@/components/ui/button';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 
 export default function Hello() {
-  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+  const basePath =  '';
 
   return (
     <div className="bg-gray-900 py-20">
