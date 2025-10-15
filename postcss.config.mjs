@@ -9,7 +9,10 @@ if (isGithubActions) {
 }
 
 export default {
-  output: 'export',
+   plugins: {
+    tailwindcss: {},
+    autoprefixer: {},
+  },
   assetPrefix: assetPrefix,
   basePath: basePath,
   images: {
