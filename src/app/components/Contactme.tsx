@@ -9,7 +9,7 @@ export default function Contactme() {
             Get In Touch
           </h1>
           <p className="text-gray-400 text-center mb-12">
-            Feel free to reach out. I'm always open to new opportunities and interesting projects.
+            Feel free to reach out. I&apos;m always open to new opportunities and interesting projects.
           </p>
 
           {/* Contact Methods */}

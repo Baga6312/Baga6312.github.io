@@ -7,9 +7,9 @@ export default function About() {
           <div className="mb-12">
             <h2 className="text-3xl font-bold lg:text-4xl text-white">About Me</h2>
             <p className="mt-4 text-lg leading-relaxed text-gray-300">
-              Hello! I'm Oussema , a passionate individual about all open-source things 
+              Hello! I&apos;m Oussema , a passionate individual about all open-source things 
               and part time hacker looking for bug bounty programs to make the web a safer place.
-              I enjoy building functional applications  and solve complex problems. 
+              I enjoy building functional applications and solve complex problems. 
               With expertise in Cyber Security and web development, I thrive on continuously
               learning to enhance my craft .
             </p>
