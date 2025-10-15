@@ -2,6 +2,8 @@ import { Button } from '@/components/ui/button';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 
 export default function Hello() {
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+
   return (
     <div className="bg-gray-900 py-20">
          <div className="container mx-auto px-6 md:px-12">
@@ -29,7 +31,7 @@ export default function Hello() {
                 <div className="flex flex-col items-center justify-center ">
                   <Avatar className="h-52 w-52 rounded-full ring-8 ring-blue-500 ring-offset-4 ring-offset-gray-900 overflow-hidden ">
                     <AvatarImage
-                      src="/ena.jpg"
+                      src={`${basePath}/ena.jpg`}
                       alt="Oussema ben Ayech"
                       className="object-cover w-100 h-80 mx -mt-4"
                     />
@@ -93,7 +95,7 @@ export default function Hello() {
                           d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
                         />
                       </svg>
-                      <a href="/cv-oussema-ben-ayech.pdf" download>
+                      <a href={`${basePath}/cv-oussema-ben-ayech.pdf`} download>
                         Download CV
                       </a>
                     </Button>

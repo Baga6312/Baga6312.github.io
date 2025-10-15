@@ -3,6 +3,7 @@ import { useState } from "react";
 import Image from "next/image";
 
 export default function Toolkit() {
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
   const [activeCategory, setActiveCategory] = useState("SoftwareDev");
   const [activeSubTab, setActiveSubTab] = useState("Technologies");
 
@@ -19,61 +20,61 @@ export default function Toolkit() {
 
   // SOFTWARE DEVELOPMENT DATA
   const technologies = [
-    { name: "React", svg: "/react.svg" },
-    { name: "Angular", svg: "/angular.svg" },
-    { name: "Node.js", svg: "/node.svg" },
-    { name: "Next.js", svg: "/next.svg" },
-    { name: "TailwindCSS", svg: "/tailwindcss.svg" },
-    { name: "Truffle", svg: "/truffle.svg" },
-    { name: "Pinata", svg: "/pinata.svg" },
-    { name: "Solidity", svg: "/solidity.svg" },
-    { name: "Bootstrap", svg: "/bootstrap.svg" },
-    { name: "Oracle", svg: "/oracle.svg" },
-    { name: "MySQL", svg: "/mysql.svg" },
-    { name: "Python", svg: "/python.svg" },
-    { name: "Git", svg: "/git.svg" },
+    { name: "React", svg: `${basePath}/react.svg` },
+    { name: "Angular", svg: `${basePath}/angular.svg` },
+    { name: "Node.js", svg: `${basePath}/node.svg` },
+    { name: "Next.js", svg: `${basePath}/next.svg` },
+    { name: "TailwindCSS", svg: `${basePath}/tailwindcss.svg` },
+    { name: "Truffle", svg: `${basePath}/truffle.svg` },
+    { name: "Pinata", svg: `${basePath}/pinata.svg` },
+    { name: "Solidity", svg: `${basePath}/solidity.svg` },
+    { name: "Bootstrap", svg: `${basePath}/bootstrap.svg` },
+    { name: "Oracle", svg: `${basePath}/oracle.svg` },
+    { name: "MySQL", svg: `${basePath}/mysql.svg` },
+    { name: "Python", svg: `${basePath}/python.svg` },
+    { name: "Git", svg: `${basePath}/git.svg` },
   ];
 
   const software = [
-    { name: "VSCode", svg: "/vscode.svg" },
-    { name: "GitHub", svg: "/github.svg" },
-    { name: "Postman", svg: "/postman.svg" },
-    { name: "Ganache", svg: "/ganache.svg" },
-    { name: "Truffle", svg: "/truffle.svg" },
-    { name: "Pentaho", svg: "/pentaho.svg" },
-    { name: "Microsoft Power BI", svg: "/powerbi.svg" },
+    { name: "VSCode", svg: `${basePath}/vscode.svg` },
+    { name: "GitHub", svg: `${basePath}/github.svg` },
+    { name: "Postman", svg: `${basePath}/postman.svg` },
+    { name: "Ganache", svg: `${basePath}/ganache.svg` },
+    { name: "Truffle", svg: `${basePath}/truffle.svg` },
+    { name: "Pentaho", svg: `${basePath}/pentaho.svg` },
+    { name: "Microsoft Power BI", svg: `${basePath}/powerbi.svg` },
   ];
 
   const languages = [
-    { name: "Python", svg: "/python.svg" },
-    { name: "R", svg: "/Rlogo.svg" },
-    { name: "C", svg: "/c.svg" },
-    { name: "HTML", svg: "/html.svg" },
-    { name: "CSS", svg: "/css.svg" },
-    { name: "JavaScript", svg: "/js.svg" },
-    { name: "TypeScript", svg: "/ts.svg" },
-    { name: "Solidity", svg: "/solidity.svg" },
-    { name: "SQL", svg: "/sql.svg" },
-    { name: "Java", svg: "/java.svg" },
-    { name: "PHP", svg: "/php.svg" },
-    { name: "JSP", svg: "/jsp.svg" },
-    { name: "Dart", svg: "/dart.svg" },
+    { name: "Python", svg: `${basePath}/python.svg` },
+    { name: "R", svg: `${basePath}/Rlogo.svg` },
+    { name: "C", svg: `${basePath}/c.svg` },
+    { name: "HTML", svg: `${basePath}/html.svg` },
+    { name: "CSS", svg: `${basePath}/css.svg` },
+    { name: "JavaScript", svg: `${basePath}/js.svg` },
+    { name: "TypeScript", svg: `${basePath}/ts.svg` },
+    { name: "Solidity", svg: `${basePath}/solidity.svg` },
+    { name: "SQL", svg: `${basePath}/sql.svg` },
+    { name: "Java", svg: `${basePath}/java.svg` },
+    { name: "PHP", svg: `${basePath}/php.svg` },
+    { name: "JSP", svg: `${basePath}/jsp.svg` },
+    { name: "Dart", svg: `${basePath}/dart.svg` },
   ];
 
   // CYBERSECURITY DATA
   const cyberSecTools = [
-    { name: "Burp Suite", svg: "/burpsuite.svg" },
-    { name: "Nuclei", svg: "/nuclei.svg" },
-    { name: "BloodHound", svg: "/bloodhound.svg" },
-    { name: "Metasploit", svg: "/metasploit.svg" },
-    { name: "Wireshark", svg: "/wireshark.svg" },
-    { name: "Nmap", svg: "/nmap.svg" },
-    { name: "Kali Linux", svg: "/kalilinux.svg" },
-    { name: "Hydra", svg: "/hydra.svg" },
-    { name: "SQLMap", svg: "/sqlmap.svg" },
-    { name: "ZAP", svg: "/zap.svg" },
-    { name: "Hashcat", svg: "/hashcat.svg" },
-    { name: "John the Ripper", svg: "/john.svg" },
+    { name: "Burp Suite", svg: `${basePath}/burpsuite.svg` },
+    { name: "Nuclei", svg: `${basePath}/nuclei.svg` },
+    { name: "BloodHound", svg: `${basePath}/bloodhound.svg` },
+    { name: "Metasploit", svg: `${basePath}/metasploit.svg` },
+    { name: "Wireshark", svg: `${basePath}/wireshark.svg` },
+    { name: "Nmap", svg: `${basePath}/nmap.svg` },
+    { name: "Kali Linux", svg: `${basePath}/kalilinux.svg` },
+    { name: "Hydra", svg: `${basePath}/hydra.svg` },
+    { name: "SQLMap", svg: `${basePath}/sqlmap.svg` },
+    { name: "ZAP", svg: `${basePath}/zap.svg` },
+    { name: "Hashcat", svg: `${basePath}/hashcat.svg` },
+    { name: "John the Ripper", svg: `${basePath}/john.svg` },
   ];
 
   return (
