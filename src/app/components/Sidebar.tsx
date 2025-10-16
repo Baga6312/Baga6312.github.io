@@ -7,7 +7,6 @@ import Certifications from "./Certifications";
 import Technologies from "./Technologies";
 import Experiences from "./Experiences";
 import Contactme from "./Contactme";
-import { Certificate } from "crypto";
 
 export default function Sidebar() {
   const helloRef = useRef<HTMLDivElement>(null);
