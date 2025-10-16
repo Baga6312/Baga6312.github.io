@@ -8,7 +8,7 @@ export default function Contactme() {
         <div className="max-w-md w-full px-4">
           <h1 className="text-3xl font-bold text-center mb-4">Get In Touch</h1>
           <p className="text-gray-400 text-center mb-6 text-sm">
-            Send me a message and I'll get back to you soon.
+            Send me a message and I&apos;ll get back to you soon.
           </p>
 
           {/* Contact Form */}

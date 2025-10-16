@@ -71,7 +71,8 @@ export default function Toolkit() {
   ];
 
   const CarouselRow = ({ items, direction }) => {
-    const extendedItems = [...items, ...items, ...items];
+    // Duplicate items enough times for seamless looping
+    const extendedItems = Array(4).fill(null).flatMap(() => items);
     
     return (
       <div className="relative w-full flex-1 flex items-center overflow-hidden">
