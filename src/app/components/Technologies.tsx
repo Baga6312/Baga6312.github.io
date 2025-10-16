@@ -70,7 +70,12 @@ export default function Toolkit() {
     { name: "John the Ripper", svg: `${basePath}/john.svg` },
   ];
 
-  const CarouselRow = ({ items, direction }) => {
+  interface CarouselRowProps {
+    items: { name: string; svg: string }[];
+    direction: 'left' | 'right';
+  }
+
+  const CarouselRow = ({ items, direction }: CarouselRowProps) => {
     // Duplicate items enough times for seamless looping
     const extendedItems = Array(4).fill(null).flatMap(() => items);
     

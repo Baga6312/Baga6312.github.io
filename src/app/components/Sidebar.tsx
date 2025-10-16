@@ -28,14 +28,15 @@ export default function Sidebar() {
     const sections = navItems.map((item) => item.ref.current).filter(Boolean);
 
     const observer = new IntersectionObserver(
-      (entries) => {
+        (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            const index = sections.indexOf(entry.target);
+            const index = sections.indexOf(entry.target as HTMLDivElement);
             setActiveSection(index);
           }
         });
       },
+  
       { threshold: 0.6 } // 60% of section visible
     );
 
