@@ -4,8 +4,8 @@ let basePath = '';
 
 if (isGithubActions) {
   const repo = process.env.GITHUB_REPOSITORY.replace(/.*?\//, '');
-  assetPrefix = `/${repo}/`;
   basePath = `/${repo}`;
+  assetPrefix = `/${repo}/`;
 }
 
 export default {
@@ -14,5 +14,8 @@ export default {
   basePath: basePath,
   images: {
     unoptimized: true,
+  },
+  webpack: (config) => {
+    return config;
   },
 };
