@@ -1,4 +1,6 @@
+"use client";
 import { useState } from "react";
+import Image from "next/image";
 import { X } from "lucide-react";
 
 export default function Certifications() {
@@ -11,7 +13,7 @@ export default function Certifications() {
 
   const certifications = [
     { name: "Java", category: "programming", image: "/HackerRank.png", cert: "/certs/java-cert.png" },
-    { name: "JavaScript", category: "programming", image: "/HackerRank.png", cert: "/certs/js-cert.png" },
+    { name: "JavaScript", category: "programming", image: "/HackerRank.png", cert: "/certs/js/I-cert.png" },
     { name: "Python", category: "programming", image: "/HackerRank.png", cert: "/certs/python-cert.png" },
     { name: "Go", category: "programming", image: "/HackerRank.png", cert: "/certs/go-cert.png" },
     { name: "SQL", category: "programming", image: "/HackerRank.png", cert: "/certs/sql-cert.png" },
@@ -46,7 +48,7 @@ export default function Certifications() {
               animation: infiniteScroll 50s linear infinite;
             }
             .carousel-scroll:hover {
-              animation: infiniteScroll 50s linear infinite  ;
+              animation: infiniteScroll 100s linear infinite;
             }
           `}</style>
 
@@ -55,13 +57,14 @@ export default function Certifications() {
               <div
                 key={`${cert.name}-${idx}`}
                 onClick={() => setSelectedCert(cert)}
-                className="flex-shrink-0 w-64 h-64 bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-2xl transition transform hover:scale-105 flex flex-col items-center justify-center gap-4 border border-gray-600 hover:border-gray-300 cursor-pointer"
+                className="flex-shrink-0 w-64 h-64 bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-2xl flex flex-col items-center justify-center gap-4 border border-gray-600 hover:border-gray-300 cursor-pointer"
               >
-                <div className="w-32 h-32 rounded-lg flex items-center justify-center shadow-lg">
-                  <img 
+                <div className="w-32 h-32 rounded-lg flex items-center justify-center shadow-lg relative">
+                  <Image 
                     src={cert.image} 
                     alt={cert.name}
-                    className="w-full h-full object-contain"
+                    fill
+                    className="object-contain"
                   />
                 </div>
                 <span className="text-sm text-gray-300 text-center font-medium">
@@ -92,11 +95,14 @@ export default function Certifications() {
 
             <div className="flex flex-col items-center gap-6 mt-4">
               {/* Large Certificate Image */}
-              <img 
-                src={selectedCert.cert} 
-                alt={selectedCert.name}
-                className="w-full max-w-3xl rounded-lg shadow-2xl border border-gray-600"
-              />
+              <div className="w-full max-w-3xl relative h-96">
+                <Image 
+                  src={selectedCert.cert} 
+                  alt={selectedCert.name}
+                  fill
+                  className="rounded-lg shadow-2xl border border-gray-600 object-contain"
+                />
+              </div>
               
               <h2 className="text-3xl font-bold text-center">{selectedCert.name}</h2>
               <p className="text-gray-300 text-center text-lg">
