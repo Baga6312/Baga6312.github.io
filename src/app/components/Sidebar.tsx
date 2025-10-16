@@ -1,16 +1,19 @@
 "use client";
 import { useRef, useEffect, useState } from "react";
-import { Home, Info, Briefcase, Code, Mail } from "lucide-react";
+import { Home, Info, Briefcase, Code, Mail, Award } from "lucide-react";
 import Hello from "./Hello";
 import About from "./About";
+import Certifications from "./Certifications";
 import Technologies from "./Technologies";
 import Experiences from "./Experiences";
 import Contactme from "./Contactme";
+import { Certificate } from "crypto";
 
 export default function Sidebar() {
   const helloRef = useRef<HTMLDivElement>(null);
   const aboutRef = useRef<HTMLDivElement>(null);
   const technologiesRef = useRef<HTMLDivElement>(null);
+  const certificationsRef = useRef<HTMLDivElement>(null);
   const experiencesRef = useRef<HTMLDivElement>(null);
   const contactRef = useRef<HTMLDivElement>(null);
   const [activeSection, setActiveSection] = useState(0);
@@ -20,6 +23,7 @@ export default function Sidebar() {
     { icon: Info, label: "About", ref: aboutRef },
     { icon: Code, label: "Technologies", ref: technologiesRef },
     { icon: Briefcase, label: "Experience", ref: experiencesRef },
+    { icon: Award , label: "Certifications", ref: certificationsRef},
     { icon: Mail, label: "Contact", ref: contactRef },
   ];
 
@@ -109,6 +113,9 @@ export default function Sidebar() {
         </div>
         <div ref={experiencesRef} className="snap-start">
           <Experiences />
+        </div>
+        <div ref={certificationsRef} className="snap-start">
+          <Certifications/>
         </div>
         <div ref={contactRef} className="snap-start">
           <Contactme />
