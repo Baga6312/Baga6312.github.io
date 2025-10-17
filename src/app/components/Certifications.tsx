@@ -48,7 +48,7 @@ export default function Certifications() {
               animation: infiniteScroll 50s linear infinite;
             }
             .carousel-scroll:hover {
-              animation: infiniteScroll 100s linear infinite;
+              animation: infiniteScroll 50s linear infinite;
             }
           `}</style>
 
