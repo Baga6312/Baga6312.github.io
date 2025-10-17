@@ -13,7 +13,7 @@ export default function Certifications() {
 
   const certifications = [
     { name: "Java", category: "programming", image: "/HackerRank.png", cert: "/certs/java-cert.png" },
-    { name: "JavaScript", category: "programming", image: "/HackerRank.png", cert: "/certs/js/I-cert.png" },
+    { name: "JavaScript", category: "programming", image: "/HackerRank.png", cert: "/certs/js-cert.png" },
     { name: "Python", category: "programming", image: "/HackerRank.png", cert: "/certs/python-cert.png" },
     { name: "Go", category: "programming", image: "/HackerRank.png", cert: "/certs/go-cert.png" },
     { name: "SQL", category: "programming", image: "/HackerRank.png", cert: "/certs/sql-cert.png" },
