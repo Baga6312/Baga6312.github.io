@@ -12,15 +12,15 @@ export default function Certifications() {
   } | null>(null);
 
   const certifications = [
-    { name: "Java", category: "programming", image: "/HackerRank.png", cert: "/certs/java-cert.png" },
-    { name: "JavaScript", category: "programming", image: "/HackerRank.png", cert: "/certs/js-cert.png" },
-    { name: "Python", category: "programming", image: "/HackerRank.png", cert: "/certs/python-cert.png" },
-    { name: "Go", category: "programming", image: "/HackerRank.png", cert: "/certs/go-cert.png" },
-    { name: "SQL", category: "programming", image: "/HackerRank.png", cert: "/certs/sql-cert.png" },
-    { name: "React", category: "programming", image: "/HackerRank.png", cert: "/certs/react-cert.png" },
-    { name: "Node", category: "programming", image: "/HackerRank.png", cert: "/certs/node-cert.png" },
-    { name: "FullStack", category: "Web Development", image: "/ffc.png", cert: "/certs/ffc-fullstack.png" },
-    { name: "CyberSecurity", category: "CyberSec", image: "/google.png", cert: "/certs/google-cybersec.jpeg" },
+    { name: "Java", category: "programming", image: "/tools/HackerRank.png", cert: "/certs/java-cert.png" },
+    { name: "JavaScript", category: "programming", image: "/tools/HackerRank.png", cert: "/certs/js-cert.png" },
+    { name: "Python", category: "programming", image: "/tools/tools/HackerRank.png", cert: "/certs/python-cert.png" },
+    { name: "Go", category: "programming", image: "/tools/HackerRank.png", cert: "/certs/go-cert.png" },
+    { name: "SQL", category: "programming", image: "/tools/HackerRank.png", cert: "/certs/sql-cert.png" },
+    { name: "React", category: "programming", image: "/tools/HackerRank.png", cert: "/certs/react-cert.png" },
+    { name: "Node", category: "programming", image: "/tools/HackerRank.png", cert: "/certs/node-cert.png" },
+    { name: "FullStack", category: "Web Development", image: "/tools/ffc.png", cert: "/certs/ffc-fullstack.png" },
+    { name: "CyberSecurity", category: "CyberSec", image: "/tools/google.png", cert: "/certs/google-cybersec.jpeg" },
   ];
 
   const infiniteCerts = [...certifications, ...certifications, ...certifications];
