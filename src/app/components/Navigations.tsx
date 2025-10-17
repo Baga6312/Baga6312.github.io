@@ -6,7 +6,7 @@ import Writeups from "./writeups";
 
 export default function Navigation() {
   const [currentPage, setCurrentPage] = useState<"home" | "blog" | "writeups">("home");
-  
+ 
   return (
     <div className="min-h-screen bg-gray-900">
       <style>{`
@@ -26,10 +26,10 @@ export default function Navigation() {
           overflow: hidden;
         }
       `}</style>
-      
+     
       {/* Top Navigation Bar */}
-      <nav className="fixed top-0 left-0 right-0 bg-transparent backdrop-blur-sm z-50 overflow-hidden">
-        <div className="max-w-7xl mx-auto px-6 py-4">
+      <nav className="fixed top-0 left-[400px] right-0 bg-transparent z-50 overflow-hidden">
+        <div className="max-w-7xl mx-auto px-6 py-4" style={{ marginLeft: currentPage === "writeups" ? "320px" : "0" }}>
           <div className="flex items-center justify-between">
             {/* Navigation Links */}
             <div className="flex items-center gap-8">
@@ -53,12 +53,12 @@ export default function Navigation() {
                 }`}
               >
                 Blog
-              </button>             
+              </button>            
             </div>
           </div>
         </div>
       </nav>
-      
+     
       {/* Page Content with Fade Animation */}
       <div className="pt-16 min-h-screen">
         {currentPage === "home" && (

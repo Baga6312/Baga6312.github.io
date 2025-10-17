@@ -17,7 +17,7 @@ export default function Contactme() {
   return (
     <>
       {/* Contact Section */}
-      <section className="h-screen bg-gray-900 text-white flex items-center justify-center snap-start">
+      <section className="h-screen bg-gray-900 text-white flex items-center justify-center snap-start m-8 pt-8">
         <div className="max-w-2xl w-full px-4">
           <h1 className="text-5xl font-bold text-center mb-6">Get In Touch</h1>
           <p className="text-gray-400 text-center mb-8 text-lg">
@@ -44,7 +44,7 @@ export default function Contactme() {
             <textarea
               name="message"
               placeholder="Your Message"
-              rows={6}
+              rows={5}
               value={formData.message}
               onChange={handleChange}
               className="w-full px-5 py-4 bg-gray-800 rounded-lg text-white placeholder-gray-500 text-base focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none"
@@ -57,7 +57,7 @@ export default function Contactme() {
             </button>
           </div>
           {/* Social Icons */}
-          <div className="flex justify-center gap-8">
+          <div className="flex justify-center gap-5 mt-[-20px]">
             <a
               href="mailto:oussema.benayech@gmail.com"
               className="text-gray-400 hover:text-blue-400 transition duration-200"

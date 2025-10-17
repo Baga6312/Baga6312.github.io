@@ -20,12 +20,20 @@ const mockProjects: Project[] = [
     bgImage: "/projects/wifivis-bg.png",
   },
   {
-    name: "c-server",
-    description: "High-performance C web server",
-    url: "https://github.com/Baga6312/c-server",
-    language: "C",
-    commits: 32,
-    bgImage: "/projects/cserver-bg.png",
+    name: "dotfiles",
+    description: "My Linux dotfiles configuration",
+    url: "https://github.com/Baga6312/dotfiles",
+    language: "Shell",
+    commits: 67,
+    bgImage: "/projects/dotfiles-bg.png",
+  },
+  {
+    name: "CodeNest",
+    description: "Collaborative coding platform",
+    url: "https://github.com/Baga6312/CodeNest",
+    language: "JavaScript",
+    commits: 51,
+    bgImage: "/projects/codenest-bg.png",
   },
   {
     name: "Dark-scarping",
@@ -59,22 +67,15 @@ const mockProjects: Project[] = [
     commits: 38,
     bgImage: "/projects/revproxy-bg.png",
   },
+  
   {
-    name: "dotfiles",
-    description: "My Linux dotfiles configuration",
-    url: "https://github.com/Baga6312/dotfiles",
-    language: "Shell",
-    commits: 67,
-    bgImage: "/projects/dotfiles-bg.png",
-  },
-  {
-    name: "CodeNest",
-    description: "Collaborative coding platform",
-    url: "https://github.com/Baga6312/CodeNest",
-    language: "JavaScript",
-    commits: 51,
-    bgImage: "/projects/codenest-bg.png",
-  },
+    name: "c-server",
+    description: "High-performance C web server",
+    url: "https://github.com/Baga6312/c-server",
+    language: "C",
+    commits: 32,
+    bgImage: "/projects/cserver-bg.png",
+  }
 ];
 
 export default function Projects() {
@@ -98,7 +99,7 @@ export default function Projects() {
   };
 
   return (
-    <section className="min-h-screen bg-gray-900 text-white flex flex-col items-center justify-center snap-start p-8 ml-11 mt-[-100px]">
+    <section className="min-h-screen bg-gray-900 text-white flex flex-col items-center justify-center snap-start p-8 ml-11 ">
       <div className="w-full">
         <h1 className="text-5xl font-bold mb-4 text-center">My Projects</h1>
         <p className="text-gray-400 text-center mb-12">

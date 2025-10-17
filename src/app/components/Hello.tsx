@@ -115,7 +115,7 @@ export default function Hello() {
        
       `}</style>
 
-      <div className="container mx-auto px-6 md:px-12">
+      <div className="container mx-auto px-6 md:px-6">
         <div className="flex flex-col md:flex-row items-center gap-8">
           {/* Left Section */}
           <div className="md:w-1/2 lg:w-2/3 pl-[150px]">
@@ -139,7 +139,7 @@ export default function Hello() {
 
           {/* Right Section (Avatar and Profile) */}
           <div className="md:w-1/2 lg:w-1/3 animate-slide-in-right">
-            <div className="flex flex-col p-10">
+            <div className="flex flex-col p-8">
               <div className="relative">
                 <div className="flex flex-col items-center justify-center">
                   <Avatar className="h-52 w-52 rounded-full ring-8 ring-blue-500 ring-offset-4 ring-offset-gray-900 overflow-hidden">

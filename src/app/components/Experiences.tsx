@@ -62,7 +62,7 @@ const Experiences = () => {
   ];
 
   return (
-    <section className="min-h-screen bg-gray-900 text-gray-100 flex items-center justify-center snap-start p-8">
+    <section className="min-h-screen bg-gray-900 text-gray-100 flex items-center justify-center snap-start p-8 pl-[100px]">
       <div className="container max-w-7xl mx-auto w-full">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Education Section */}
