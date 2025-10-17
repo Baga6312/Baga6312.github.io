@@ -144,7 +144,7 @@ export default function Hello() {
                 <div className="flex flex-col items-center justify-center">
                   <Avatar className="h-52 w-52 rounded-full ring-8 ring-blue-500 ring-offset-4 ring-offset-gray-900 overflow-hidden">
                     <AvatarImage
-                      src={`${basePath}/tools/ena.jpg`}
+                      src={`${basePath}/tools/ena.png`}
                       alt="Oussema ben Ayech"
                       className="object-cover w-100 h-80 mx -mt-4"
                     />
