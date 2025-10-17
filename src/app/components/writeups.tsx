@@ -2,13 +2,7 @@
 import { useState, useEffect } from "react";
 import { FileText, Home, Search, Github, ChevronRight } from "lucide-react";
 
-interface TreeNode {
-  name: string;
-  path: string;
-  type: 'file' | 'dir';
-  children?: TreeNode[];
-  content?: string;
-}
+
 
 interface WriteupItem {
   name: string;

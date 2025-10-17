@@ -1,4 +1,3 @@
-import { FileCode, ArrowRight } from 'lucide-react';
 
 interface BlogProps {
   onNavigateToWriteups?: () => void;
