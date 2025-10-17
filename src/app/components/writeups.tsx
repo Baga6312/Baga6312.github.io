@@ -2,7 +2,13 @@
 import { useState, useEffect } from "react";
 import { FileText, Home, Search, Github, ChevronRight } from "lucide-react";
 
-
+interface TreeNode {
+  name: string;
+  path: string;
+  type: 'file' | 'dir';
+  children?: TreeNode[];
+  content?: string;
+}
 
 interface WriteupItem {
   name: string;
@@ -33,7 +39,7 @@ export default function Writeups() {
       // Extract writeups: look for .md files
       const writeupsList: WriteupItem[] = [];
       
-      data.tree.forEach((item: any) => {
+      data.tree.forEach((item: { type: string; path: string }) => {
         if (item.type === 'blob' && item.path.endsWith('.md') && !item.path.startsWith('.obsidian')) {
           const parts = item.path.split('/');
           if (parts.length >= 2 && (parts[0] === 'machines' || parts[0] === 'challenges')) {
@@ -81,9 +87,12 @@ export default function Writeups() {
     setSelectedFile({ ...item, content });
   };
 
-  const renderMarkdown = (markdown: string) => {
+  const renderMarkdown = (markdown: string, filePath: string) => {
     // Simple markdown rendering
     let html = markdown;
+    
+    // Get the directory path for the current file
+    const dirPath = filePath.substring(0, filePath.lastIndexOf('/'));
     
     // Headers
     html = html.replace(/^### (.*$)/gim, '<h3 class="text-xl font-bold mt-6 mb-3 text-white">$1</h3>');
@@ -92,10 +101,16 @@ export default function Writeups() {
     
     // Images - handle both ![[image.png]] (Obsidian) and ![alt](url) (standard markdown)
     html = html.replace(/!\[\[([^\]]+)\]\]/g, (match, filename) => {
-      const imagePath = `https://raw.githubusercontent.com/${GITHUB_REPO}/${GITHUB_BRANCH}/machines/${selectedFile?.name}/${filename}`;
+      const imagePath = `https://raw.githubusercontent.com/${GITHUB_REPO}/${GITHUB_BRANCH}/${dirPath}/${filename}`;
       return `<img src="${imagePath}" alt="${filename}" class="rounded-lg my-4 max-w-full border border-gray-800 shadow-lg" />`;
     });
-    html = html.replace(/!\[([^\]]*)\]\(([^)]+)\)/g, '<img src="$2" alt="$1" class="rounded-lg my-4 max-w-full border border-gray-800 shadow-lg" />');
+    html = html.replace(/!\[([^\]]*)\]\(([^)]+)\)/g, (match, alt, url) => {
+      // If it's a relative path, make it absolute
+      if (!url.startsWith('http')) {
+        url = `https://raw.githubusercontent.com/${GITHUB_REPO}/${GITHUB_BRANCH}/${dirPath}/${url}`;
+      }
+      return `<img src="${url}" alt="${alt}" class="rounded-lg my-4 max-w-full border border-gray-800 shadow-lg" />`;
+    });
     
     // Code blocks
     html = html.replace(/```(\w+)?\n([\s\S]*?)```/g, '<pre class="bg-gray-950 border border-gray-800 rounded-lg p-4 my-4 overflow-x-auto"><code class="text-sm text-gray-300 font-mono">$2</code></pre>');
@@ -259,7 +274,7 @@ export default function Writeups() {
             {/* Content */}
             <div 
               className="prose prose-invert prose-lg max-w-none"
-              dangerouslySetInnerHTML={{ __html: renderMarkdown(selectedFile.content) }}
+              dangerouslySetInnerHTML={{ __html: renderMarkdown(selectedFile.content, selectedFile.path) }}
             />
           </div>
         ) : (
