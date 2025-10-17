@@ -73,7 +73,7 @@ export default function Sidebar() {
   return (
     <>
       <nav
-        className={`fixed left-0 top-1/2 -translate-y-1/2 hidden h-auto w-16 flex-col items-center justify-center space-y-6 bg-gray-800 py-8 md:flex rounded-r-2xl shadow-lg z-40 transition-opacity duration-500 ${
+          className={`fixed left-0 top-1/2 -translate-y-1/2 hidden h-auto w-16 flex-col items-center justify-center space-y-6 bg-secondary py-8 md:flex rounded-r-2xl shadow-lg z-40 transition-opacity duration-500 ${
           sidebarVisible ? "opacity-100" : "opacity-0"
         }`}
       >
@@ -105,10 +105,10 @@ export default function Sidebar() {
         })}
       </nav>
 
-      <div
-        className="snap-y snap-mandatory overflow-y-scroll h-screen scrollbar-hide"
-        style={{ scrollBehavior: "smooth" }}
-      >
+<div
+  className="snap-y snap-mandatory overflow-y-scroll h-screen scrollbar-hide bg-background"
+  style={{ scrollBehavior: "smooth" }}
+>
         <div ref={helloRef} className="snap-start">
           <Hello />
         </div>

@@ -128,9 +128,9 @@ export default function Writeups() {
   const challengeWriteups = filteredWriteups.filter(w => w.category === 'challenges');
 
   return (
-    <div className="flex h-screen bg-gray-900 text-white">
+      <div className="flex h-screen bg-background text-white">
       {/* Sidebar */}
-      <aside className="w-80 bg-gray-950 border-r border-gray-800 flex flex-col overflow-hidden fixed left-0 top-0 h-screen">
+        <aside className="w-80 bg-secondary border-r border-gray-800 flex flex-col overflow-hidden fixed left-0 top-0 h-screen">
         {/* Sidebar Header */}
         <div className="p-4 border-b border-gray-800">
           <div className="flex items-center gap-3 mb-4">

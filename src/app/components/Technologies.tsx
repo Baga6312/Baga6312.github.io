@@ -1,10 +1,14 @@
 "use client";
-import { useState } from "react";
+import { useState , useRef } from "react";
 import Image from "next/image";
+import { useHoverGradient } from "@/hooks/useHoverGradient";
 
 export default function Toolkit() {
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+
   const [activeCategory, setActiveCategory] = useState("SoftwareDev");
+  const containerRef = useRef<HTMLDivElement>(null);
+  useHoverGradient(containerRef);
 
   const categories = [
     { id: "SoftwareDev", name: "Software Development" },
@@ -106,8 +110,9 @@ const cyberSecTools = [
           {extendedItems.map((item, idx) => (
             <div
               key={`${item.name}-${idx}`}
-              className="flex-shrink-0 w-28 h-28 bg-gray-800 p-4 rounded-lg shadow-lg hover:bg-gray-700 hover:shadow-2xl transition transform hover:scale-110 flex items-center justify-center border border-gray-600 hover:border-blue-500 cursor-pointer"
+              className="flex-shrink-0 hover-card w-28 h-28 bg-gray-800 p-4 rounded-lg shadow-lg hover:bg-gray-700 hover:shadow-2xl transition transform hover:scale-110 flex items-center justify-center border border-gray-600 hover:border-blue-500 cursor-pointer"
             >
+              <div className="hover-card-content">
               <Image
                 src={item.svg}
                 width={64}
@@ -115,6 +120,7 @@ const cyberSecTools = [
                 alt={`${item.name} logo`}
                 className="object-contain"
               />
+              </div>
             </div>
           ))}
         </div>
@@ -123,7 +129,7 @@ const cyberSecTools = [
   };
 
   return (
-    <section className="h-screen bg-gray-900 text-white flex flex-col overflow-hidden p-6">
+      <section className="h-screen bg-background text-white flex flex-col overflow-hidden p-6">
       <div className="flex flex-col h-full gap-3">
         {/* Header */}
         <div className="text-center flex-shrink-0">
@@ -146,7 +152,7 @@ const cyberSecTools = [
         </div>
 
         {/* Carousels - Fill remaining space */}
-        <div className="flex flex-col flex-1 justify-center gap-2 min-h-0">
+        <div ref={containerRef} className="flex flex-col flex-1 justify-center gap-2 min-h-0">
           {activeCategory === "SoftwareDev" && (
             <>
               <CarouselRow items={technologies} direction="right" />

@@ -19,7 +19,7 @@ export default function Blog({ onNavigateToWriteups }: BlogProps) {
   const categories = ["All", "Cybersecurity", "Web Development", "Programming"];
 
   return (
-    <section className="min-h-screen bg-gray-900 text-white py-12">
+      <section className="min-h-screen bg-background text-white py-12">
       <div className="max-w-6xl mx-auto px-6">
         {/* Blog Header */}
         <div className="text-center mb-12">

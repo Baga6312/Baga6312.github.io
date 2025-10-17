@@ -8,7 +8,7 @@ export default function Navigation() {
   const [currentPage, setCurrentPage] = useState<"home" | "blog" | "writeups">("home");
  
   return (
-    <div className="min-h-screen bg-gray-900">
+      <div className="min-h-screen bg-background">
       <style>{`
         @keyframes fadeInBlur {
           from {

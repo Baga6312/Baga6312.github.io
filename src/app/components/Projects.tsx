@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { Github, ExternalLink, ChevronLeft, ChevronRight } from "lucide-react";
+import { useHoverGradient } from "@/hooks/useHoverGradient";
 
 interface Project {
   name: string;
@@ -82,11 +83,13 @@ export default function Projects() {
   const [projects, setProjects] = useState<Project[]>([]);
   const [loading, setLoading] = useState(true);
   const scrollContainerRef = useRef<HTMLDivElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     setProjects(mockProjects);
     setLoading(false);
   }, []);
+  useHoverGradient(containerRef);
 
   const scroll = (direction: "left" | "right") => {
     if (scrollContainerRef.current) {
@@ -99,7 +102,7 @@ export default function Projects() {
   };
 
   return (
-    <section className="min-h-screen bg-gray-900 text-white flex flex-col items-center justify-center snap-start p-8 ml-11 ">
+      <section className="min-h-screen bg-background text-white flex flex-col items-center justify-center snap-start p-8 ml-11 ">
       <div className="w-full">
         <h1 className="text-5xl font-bold mb-4 text-center">My Projects</h1>
         <p className="text-gray-400 text-center mb-12">
@@ -111,7 +114,7 @@ export default function Projects() {
             <p className="text-gray-400">Loading projects...</p>
           </div>
         ) : (
-          <div className="relative flex items-center justify-center">
+          <div ref={containerRef} className="relative flex items-center justify-center">
             {/* Left Arrow */}
             <button
               onClick={() => scroll("left")}
@@ -121,12 +124,11 @@ export default function Projects() {
               <ChevronLeft className="w-6 h-6 text-white" />
             </button>
 
-            {/* Gradient fade left */}
-            <div className="absolute left-0 top-0 w-40 h-full bg-gradient-to-r from-gray-900 via-transparent to-transparent z-10 pointer-events-none" />
-            {/* Gradient fade right */}
-            <div className="absolute right-0 top-0 w-40 h-full bg-gradient-to-l from-gray-900 via-transparent to-transparent z-10 pointer-events-none" />
-
-            {/* Scrollable Container */}
+                 {/* Gradient fade left */}
+<div className="absolute left-0 top-0 w-40 h-full bg-gradient-to-r from-background via-transparent to-transparent z-10 pointer-events-none" />
+{/* Gradient fade right */}
+<div className="absolute right-0 top-0 w-40 h-full bg-gradient-to-l from-background via-transparent to-transparent z-10 pointer-events-none" />
+                 {/* Scrollable Container */}
             <div 
               ref={scrollContainerRef}
               className="overflow-x-auto scrollbar-hide"
@@ -151,7 +153,7 @@ export default function Projects() {
                     href={project.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group flex-shrink-0 w-72 h-96 rounded-xl border border-gray-700 hover:border-blue-500 transition-all hover:shadow-lg hover:shadow-blue-500/20 overflow-hidden flex flex-col relative"
+                      className="group hover-card flex-shrink-0 w-72 h-96 rounded-xl border border-gray-700 hover:border-blue-500 transition-all hover:shadow-lg hover:shadow-blue-500/20 overflow-hidden flex flex-col relative"
                     style={{
                       backgroundImage: project.bgImage ? `url(${project.bgImage})` : "linear-gradient(135deg, rgb(37, 99, 235), rgb(168, 85, 247))",
                       backgroundSize: "cover",
@@ -159,10 +161,11 @@ export default function Projects() {
                     }}
                   >
                     {/* Transparent Dark Overlay */}
-                    <div className="absolute inset-0 bg-black bg-opacity-60 group-hover:bg-opacity-50 transition-all" />
+<div className="absolute inset-0 bg-black bg-opacity-60 group-hover:bg-opacity-50 transition-all" />
 
-                    {/* Content */}
-                    <div className="p-6 flex-1 flex flex-col relative z-10 justify-between">
+{/* Content */}
+<div className="hover-card-content p-6 flex-1 flex flex-col relative z-10 justify-between">
+                    
                       <div className="flex items-start justify-between mb-3">
                         <h3 className="text-2xl font-semibold text-blue-400 group-hover:text-blue-300 transition line-clamp-1">
                           {project.name}

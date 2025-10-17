@@ -17,7 +17,7 @@ export default function Contactme() {
   return (
     <>
       {/* Contact Section */}
-      <section className="h-screen bg-gray-900 text-white flex items-center justify-center snap-start m-8 pt-8">
+        <section className="h-screen bg-background text-white flex items-center justify-center snap-start m-8 pt-8">
         <div className="max-w-2xl w-full px-4">
           <h1 className="text-5xl font-bold text-center mb-6">Get In Touch</h1>
           <p className="text-gray-400 text-center mb-8 text-lg">
@@ -31,7 +31,7 @@ export default function Contactme() {
               placeholder="Your Name"
               value={formData.name}
               onChange={handleChange}
-              className="w-full px-5 py-4 bg-gray-800 rounded-lg text-white placeholder-gray-500 text-base focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full px-5 py-4 bg-secondary rounded-lg text-white placeholder-gray-500 text-base focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
             <input
               type="email"
@@ -96,7 +96,7 @@ export default function Contactme() {
         </div>
       </section>
       {/* Footer */}
-      <footer className="bg-gray-950 text-gray-400 text-center py-6 text-sm border-t border-gray-800">
+        <footer className="bg-secondary text-gray-400 text-center py-6 text-sm border-t border-gray-800">
         <p>&copy; 2025 Oussema Ben Ayech. All rights reserved.</p>
         <p className="text-gray-600 text-sm mt-2">Designed & Built with React & Next.js</p>
       </footer>
