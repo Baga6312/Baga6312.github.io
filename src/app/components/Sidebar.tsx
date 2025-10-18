@@ -53,7 +53,7 @@ export default function Sidebar() {
           }
         });
       },
-      { threshold: 0.6 }
+      { threshold: 0.1 }
     );
 
     sections.forEach((section) => {
@@ -116,10 +116,10 @@ export default function Sidebar() {
         <div ref={aboutRef} className="snap-start ">
           <About />
         </div>
-        <div ref={technologiesRef} className="snap-start z-0">
+        <div ref={technologiesRef} className="snap-start">
           <Technologies />
         </div>
-        <div ref={experiencesRef} className="snap-start">
+        <div ref={experiencesRef} className="snap-start ">
           <Experiences />
         </div>
         <div ref={projectsRef} className="snap-start">
