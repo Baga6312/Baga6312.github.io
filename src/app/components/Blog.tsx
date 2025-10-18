@@ -3,9 +3,12 @@ import AnimatedBackground from './AnimatedBackground';
 
 interface BlogProps {
   onNavigateToWriteups?: () => void;
+  onNavigateToPentesting?: () => void;
+  onNavigateToIOT?: () => void;
+  
 }
 
-export default function Blog({ onNavigateToWriteups }: BlogProps) {
+export default function Blog({ onNavigateToWriteups, onNavigateToPentesting,onNavigateToIOT }: BlogProps) {
   const containerRef = useRef<HTMLDivElement>(null);
 
   const blogPosts = [
@@ -17,6 +20,24 @@ export default function Blog({ onNavigateToWriteups }: BlogProps) {
       excerpt: "Detailed writeups and solutions from HackTheBox challenges. Learn penetration testing techniques and security best practices.",
       readTime: "Various",
       isWriteups: true
+    },
+    {
+      id: 2,
+      title: "Pentesting Notes",
+      date: "Updated when i do",
+      category: "Hacking",
+      excerpt: "Some pentesting technique and practical approaches i use to complete tasks and challenges on diffirent CyberSecurity platform.",
+      readTime: "Various",
+      isWriteups: false
+    },
+    {
+      id: 3,
+      title: "IOT Hacking tool",
+      date: "Updated when i do",
+      category: "Hacking",
+      excerpt: "An IOT hacking Tool developped part of school project.",
+      readTime: "Various",
+      isWriteups: false
     }
   ];
 
@@ -28,7 +49,6 @@ export default function Blog({ onNavigateToWriteups }: BlogProps) {
       
       <div className="relative z-10">
         <div className="max-w-6xl mx-auto px-6">
-          {/* Blog Header */}
           <div className="text-center mb-12">
             <h1 className="text-5xl md:text-6xl font-bold mb-4">My Blog</h1>
             <p className="text-xl text-gray-400">
@@ -36,7 +56,6 @@ export default function Blog({ onNavigateToWriteups }: BlogProps) {
             </p>
           </div>
 
-          {/* Category Filter */}
           <div className="flex flex-wrap justify-center gap-3 mb-12">
             {categories.map((category) => (
               <button
@@ -48,19 +67,25 @@ export default function Blog({ onNavigateToWriteups }: BlogProps) {
             ))}
           </div>
 
-          {/* Blog Posts Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {blogPosts.map((post) => (
               <article
                 key={post.id}
-                onClick={() => post.isWriteups && onNavigateToWriteups?.()}
+                onClick={() =>{
+                  if (post.id === 1){
+                  onNavigateToWriteups?.(); 
+                  } else if (post.id === 2){
+                  onNavigateToPentesting?.();
+                  } else if (post.id === 3){
+                  onNavigateToIOT?.();
+                  }
+                } }
                 className={`bg-gray-800 p-6 rounded-lg border transition-all duration-300 hover:shadow-lg cursor-pointer group ${
                   post.isWriteups
                     ? 'border-purple-500 hover:border-purple-400 hover:shadow-purple-500/20'
-                    : 'border-gray-700 hover:border-blue-500 hover:shadow-blue-500/20'
+                    : 'border-blue-700 hover:border-blue-500 hover:shadow-blue-500/20'
                 }`}
               >
-                {/* Category Badge */}
                 <div className="mb-3">
                   <span className={`inline-block px-3 py-1 text-xs font-semibold rounded-full ${
                     post.isWriteups
@@ -71,7 +96,6 @@ export default function Blog({ onNavigateToWriteups }: BlogProps) {
                   </span>
                 </div>
 
-                {/* Title */}
                 <h2 className={`text-2xl font-bold mb-2 transition-colors ${
                   post.isWriteups
                     ? 'group-hover:text-purple-400'
@@ -80,18 +104,15 @@ export default function Blog({ onNavigateToWriteups }: BlogProps) {
                   {post.title}
                 </h2>
 
-                {/* Excerpt */}
                 <p className="text-gray-400 mb-4 line-clamp-2">
                   {post.excerpt}
                 </p>
 
-                {/* Meta */}
                 <div className="flex items-center justify-between text-sm text-gray-500 pt-4 border-t border-gray-700">
                   <span>{post.date}</span>
                   <span>{post.readTime}</span>
                 </div>
 
-                {/* Read More */}
                 <div className="mt-4 opacity-0 group-hover:opacity-100 transition-opacity">
                   <span className={`font-semibold text-sm ${
                     post.isWriteups

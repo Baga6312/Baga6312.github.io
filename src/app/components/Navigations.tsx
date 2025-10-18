@@ -3,9 +3,11 @@ import { useState } from "react";
 import Sidebar from "./Sidebar";
 import Blog from "./Blog";
 import Writeups from "./writeups";
+import Pentesting from "./pentestnotes";
+import IOT from "./IOT";
 
 export default function Navigation() {
-  const [currentPage, setCurrentPage] = useState<"home" | "blog" | "writeups">("home");
+  const [currentPage, setCurrentPage] = useState<"home" | "blog" | "writeups" | "pentesting" |"IOT">("home");
  
   return (
       <div className="min-h-screen ">
@@ -27,11 +29,9 @@ export default function Navigation() {
         }
       `}</style>
      
-      {/* Top Navigation Bar */}
       <nav className="fixed top-0 left-[400px] right-0 bg-transparent z-50 overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 py-4" style={{ marginLeft: currentPage === "writeups" ? "320px" : "0" }}>
           <div className="flex items-center justify-between">
-            {/* Navigation Links */}
             <div className="flex items-center gap-8">
               <button
                 onClick={() => setCurrentPage("home")}
@@ -68,7 +68,11 @@ export default function Navigation() {
         )}
         {currentPage === "blog" && (
           <div key="blog" className="page-fade-in">
-            <Blog onNavigateToWriteups={() => setCurrentPage("writeups")} />
+            <Blog 
+              onNavigateToWriteups={() => setCurrentPage("writeups")} 
+              onNavigateToPentesting={() => setCurrentPage("pentesting")}
+              onNavigateToIOT={() => setCurrentPage("IOT")}
+            />
           </div>
         )}
         {currentPage === "writeups" && (
@@ -76,6 +80,16 @@ export default function Navigation() {
             <Writeups />
           </div>
         )}
+        {currentPage === "pentesting" && (
+           <div key="pentesting" className="page-fade-in">
+              <Pentesting />
+            </div>
+          )}
+          {currentPage === "IOT" && (
+           <div key="pentesting" className="page-fade-in">
+              <IOT/>
+            </div>
+          )}
       </div>
     </div>
   );

@@ -1,5 +1,5 @@
 import React from 'react';
-import { GraduationCap, Briefcase } from 'lucide-react';
+import { GraduationCap, Briefcase, Globe } from 'lucide-react';
 
 const Experiences = () => {
   const education = [
@@ -61,8 +61,14 @@ const Experiences = () => {
     }
   ];
 
+  const languages = [
+    { language: "English", level: "Excellent" },
+    { language: "French", level: "Intermediate" },
+    { language: "Arabic", level: "Native" }
+  ];
+
   return (
-      <section className="min-h-screen  text-gray-100 flex items-center justify-center snap-start p-8 pl-[100px] relative z-10">
+    <section className="min-h-screen text-gray-100 flex items-center justify-center snap-start p-8 pl-[100px] relative z-10">
       <div className="container max-w-7xl mx-auto w-full">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Education Section */}
@@ -82,6 +88,25 @@ const Experiences = () => {
                   <p className="text-gray-300">{edu.institution}</p>
                 </div>
               ))}
+            </div>
+
+            {/* Languages Section */}
+            <div className="space-y-8 pt-8 border-t border-gray-700">
+              <div className="flex items-center gap-3 mb-8">
+                <Globe className="w-8 h-8 text-blue-500" />
+                <h2 className="text-4xl font-bold text-white">Languages</h2>
+              </div>
+              
+              <div className="space-y-6">
+                {languages.map((lang, index) => (
+                  <div key={index} className="group border-l-2 border-gray-700 pl-6 hover:border-blue-500 transition-colors">
+                    <h3 className="text-blue-400 font-semibold text-lg mb-1">
+                      {lang.language}
+                    </h3>
+                    <p className="text-gray-300">{lang.level}</p>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
 
@@ -122,6 +147,24 @@ const Experiences = () => {
             </div>
           </div>
         </div>
+
+          {/* Languages Section */}
+          <div  className="space-y-8">
+            <div className="flex items-center gap-3 mb-8">
+         
+            </div>
+            
+            <div className="space-y-4">
+              {languages.map((lang, index) => (
+                <div key={index} className="p-4  group">
+                  <h3 className="text-blue-400 font-semibold text-lg group-hover:text-blue-300 transition-colors">
+                   
+                  </h3>
+                  <p className="text-gray-300 text-sm"></p>
+                </div>
+              ))}
+            </div>
+          </div>
       </div>
     </section>
   );
