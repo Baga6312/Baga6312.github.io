@@ -3,6 +3,7 @@ import { useRef, useEffect, useState } from "react";
 import { Home, Info, Briefcase, Code, Mail, Award, FolderGit2 } from "lucide-react";
 import Hello from "./Hello";
 import About from "./About";
+import AnimatedBackground from './AnimatedBackground';
 import Certifications from "./Certifications";
 import Technologies from "./Technologies";
 import Experiences from "./Experiences";
@@ -104,18 +105,18 @@ export default function Sidebar() {
           );
         })}
       </nav>
-
-<div
-  className="snap-y snap-mandatory overflow-y-scroll h-screen scrollbar-hide bg-background"
-  style={{ scrollBehavior: "smooth" }}
->
+      
+<AnimatedBackground />
+<div className="fixed inset-0 bg-black/20 pointer-events-none z-0"></div>
+<div className="snap-y snap-mandatory overflow-y-scroll h-screen scrollbar-hide" style={{ scrollBehavior: "smooth" }} >
+  
         <div ref={helloRef} className="snap-start">
           <Hello />
         </div>
-        <div ref={aboutRef} className="snap-start">
+        <div ref={aboutRef} className="snap-start ">
           <About />
         </div>
-        <div ref={technologiesRef} className="snap-start">
+        <div ref={technologiesRef} className="snap-start z-0">
           <Technologies />
         </div>
         <div ref={experiencesRef} className="snap-start">

@@ -1,6 +1,6 @@
 export default function About() {
   return (
-      <section id="about" className="min-h-screen bg-secondary flex items-center justify-center snap-start p-8">
+      <section id="about" className="min-h-screen flex items-center justify-center snap-start p-8 relative z-10">
       <div className="container mx-auto">
         <div className="max-w-4xl mx-auto">
           {/* About Me Section */}

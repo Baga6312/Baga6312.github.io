@@ -42,9 +42,13 @@ export default function Hello() {
   }, []);
 
   return (
-      <div className="h-screen bg-background py-0 flex items-center justify-center snap-start overflow-hidden relative" suppressHydrationWarning>
-      <AnimatedBackground />
+      <div className="h-screen bg-background py-0 flex items-center justify-center snap-start overflow-hidden " suppressHydrationWarning>
       <style suppressHydrationWarning>{`
+
+      .avatar-glow {
+  filter: drop-shadow(0 0 20px rgba(9, 30, 46, 0.6)) drop-shadow(0 0 40px rgba(9, 30, 156, 0.5));
+}
+      
         @keyframes slideInLeft {
           from {
             opacity: 0;
@@ -140,10 +144,10 @@ export default function Hello() {
 
             {/* Right Section (Avatar and Profile) */}
             <div className="md:w-1/2 lg:w-1/3 animate-slide-in-right">
-              <div className="flex flex-col p-8">
+              <div className="flex flex-col  pt-[80px]">
                 <div className="relative">
                   <div className="flex flex-col items-center justify-center">
-                    <Avatar className="h-52 w-52 rounded-full ring-8 ring-blue-500 ring-offset-4 ring-offset-gray-900 overflow-hidden">
+                      <Avatar className="h-52 w-52 rounded-full ring-8 ring-blue-500 ring-offset-4 ring-offset-gray-900 overflow-hidden avatar-glow">
                       <AvatarImage
                         src={`${basePath}/tools/ena.png`}
                         alt="Oussema ben Ayech"

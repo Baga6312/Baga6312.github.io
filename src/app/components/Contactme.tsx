@@ -17,7 +17,7 @@ export default function Contactme() {
   return (
     <>
       {/* Contact Section */}
-        <section className="h-screen bg-background text-white flex items-center justify-center snap-start m-8 pt-8">
+        <section className="h-screen text-white flex items-center justify-center snap-start m-8 pt-8 relative z-10">
         <div className="max-w-2xl w-full px-4">
           <h1 className="text-5xl font-bold text-center mb-6">Get In Touch</h1>
           <p className="text-gray-400 text-center mb-8 text-lg">
@@ -96,7 +96,7 @@ export default function Contactme() {
         </div>
       </section>
       {/* Footer */}
-        <footer className="bg-secondary text-gray-400 text-center py-6 text-sm border-t border-gray-800">
+        <footer className="bg-secondary text-gray-400 text-center py-6 text-sm border-t border-gray-800 relative z-10">
         <p>&copy; 2025 Oussema Ben Ayech. All rights reserved.</p>
         <p className="text-gray-600 text-sm mt-2">Designed & Built with React & Next.js</p>
       </footer>

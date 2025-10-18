@@ -23,7 +23,7 @@ export default function Blog({ onNavigateToWriteups }: BlogProps) {
   const categories = ["All", "Cybersecurity", "Web Development", "Programming"];
 
   return (
-    <section className="min-h-screen bg-background text-white py-12 relative overflow-hidden" ref={containerRef}>
+    <section className="min-h-screen text-white py-[100px] relative overflow-hidden" ref={containerRef}>
       <AnimatedBackground />
       
       <div className="relative z-10">

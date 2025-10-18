@@ -8,7 +8,7 @@ export default function Navigation() {
   const [currentPage, setCurrentPage] = useState<"home" | "blog" | "writeups">("home");
  
   return (
-      <div className="min-h-screen bg-background">
+      <div className="min-h-screen ">
       <style>{`
         @keyframes fadeInBlur {
           from {
@@ -60,7 +60,7 @@ export default function Navigation() {
       </nav>
      
       {/* Page Content with Fade Animation */}
-      <div className="pt-16 min-h-screen">
+      <div className="pt-0 min-h-screen">
         {currentPage === "home" && (
           <div key="home" className="page-fade-in">
             <Sidebar />

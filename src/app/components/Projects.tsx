@@ -102,7 +102,7 @@ export default function Projects() {
   };
 
   return (
-      <section className="min-h-screen bg-background text-white flex flex-col items-center justify-center snap-start p-8 ml-11 ">
+      <section className="min-h-screen  text-white flex flex-col items-center justify-center snap-start p-8 ml-11 relative z-10">
       <div className="w-full">
         <h1 className="text-5xl font-bold mb-4 text-center">My Projects</h1>
         <p className="text-gray-400 text-center mb-12">

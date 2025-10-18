@@ -26,7 +26,7 @@ export default function Certifications() {
   const infiniteCerts = [...certifications, ...certifications, ...certifications];
 
   return (
-      <section className="min-h-screen bg-background text-white flex flex-col overflow-hidden p-6 pt-[100px]">
+      <section className="min-h-screen  text-white flex flex-col overflow-hidden p-6 pt-[100px] relative z-10">
       <div className="flex flex-col h-full gap-8">
         {/* Header */}
         <div className="text-center">

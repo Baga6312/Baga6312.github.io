@@ -11,11 +11,9 @@ useEffect(() => {
   if (!ctx) return;
 
   // Get parent container dimensions instead of window
-  const parent = canvas.parentElement?.parentElement;
-  if (!parent) return;
 
-  canvas.width = parent.clientWidth;
-  canvas.height = parent.clientHeight;
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
 
   const particles: Array<{ x: number; y: number; vx: number; vy: number; size: number; opacity: number }> = [];
 
@@ -33,7 +31,7 @@ useEffect(() => {
   let animationFrameId: number;
 
   const animate = () => {
-    ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+    ctx.fillStyle = 'rgba(0, 0, 15, 1)';
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
     particles.forEach(particle => {

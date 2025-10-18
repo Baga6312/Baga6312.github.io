@@ -129,7 +129,7 @@ const cyberSecTools = [
   };
 
   return (
-      <section className="h-screen bg-background text-white flex flex-col overflow-hidden p-6">
+      <section className="h-screen  text-white flex flex-col overflow-hidden p-6 relative z-10">
       <div className="flex flex-col h-full gap-3">
         {/* Header */}
         <div className="text-center flex-shrink-0">
