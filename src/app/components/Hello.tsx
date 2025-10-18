@@ -1,7 +1,6 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import AnimatedBackground from './AnimatedBackground';
 
 export default function Hello() {
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
