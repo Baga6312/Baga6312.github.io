@@ -1,7 +1,7 @@
 "use client";
 import { useRef, useEffect, useState } from "react";
 import { useRouter, usePathname } from "next/navigation";
-import { Home, Info, Briefcase, Code, Mail, Award, FolderGit2 } from "lucide-react";
+import { Home, Info, Briefcase, Code, Mail, Award, FolderGit2, BookOpen } from "lucide-react";
 import Hello from "./Hello";
 import About from "./About";
 import AnimatedBackground from './AnimatedBackground';
@@ -11,7 +11,11 @@ import Experiences from "./Experiences";
 import Contactme from "./Contactme";
 import Projects from "./Projects";
 
-export default function Sidebar() {
+interface SidebarProps {
+  onNavigateToBlog?: () => void;
+}
+
+export default function Sidebar({ onNavigateToBlog, currentPage }: SidebarProps & { currentPage?: string }) {
   const router = useRouter();
   const pathname = usePathname();
   const helloRef = useRef<HTMLDivElement>(null);
@@ -24,6 +28,9 @@ export default function Sidebar() {
   
   const [activeSection, setActiveSection] = useState(0);
   const [sidebarVisible, setSidebarVisible] = useState(false);
+  
+  // Check if we're on home page or not
+  const isHomePage = currentPage === "home" || !currentPage;
 
   // IMPORTANT: This order must match the order of sections in the DOM below
   const navItems = [
@@ -112,7 +119,26 @@ export default function Sidebar() {
         className={`fixed left-0 top-1/2 -translate-y-1/2 hidden h-auto w-16 flex-col items-center justify-center space-y-6 bg-secondary py-8 md:flex rounded-r-2xl shadow-lg z-40 transition-opacity duration-500 ${
           sidebarVisible ? "opacity-100" : "opacity-0"
         }`}
-      >
+      >  
+      <button
+          onClick={onNavigateToBlog}
+          className="group relative flex items-center justify-center transition-all"
+          title="Blog"
+        >
+          <BookOpen
+            className="h-6 w-6 text-gray-400 hover:text-purple-400 transition-all duration-300"
+          />
+          <span className="absolute left-16 ml-2 px-3 py-1 bg-gray-900 text-white text-sm rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap z-20">
+            Blog
+          </span>
+        </button>
+      
+
+        <div className="w-8 h-px bg-gray-700"></div>
+
+
+
+
         {navItems.map((item, index) => {
           const Icon = item.icon;
           const isActive = activeSection === index;
@@ -139,6 +165,11 @@ export default function Sidebar() {
             </button>
           );
         })}
+
+        {/* Separator */}
+
+        {/* Blog Button */}
+      
       </nav>
       
       <AnimatedBackground />

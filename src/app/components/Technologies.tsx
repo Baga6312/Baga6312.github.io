@@ -15,8 +15,7 @@ export default function Toolkit() {
     { id: "CyberSec", name: "Cybersecurity" },
   ];
 
-  // SOFTWARE DEVELOPMENT DATA
-// SOFTWARE DEVELOPMENT DATA
+
 
 const technologies = [
   { name: "React", svg: `${basePath}/tools/software/react.svg` },
