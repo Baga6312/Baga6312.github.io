@@ -1,6 +1,5 @@
 "use client";
 import { useRef, useEffect, useState } from "react";
-import { useRouter, usePathname } from "next/navigation";
 import { Home, Info, Briefcase, Code, Mail, Award, FolderGit2, BookOpen } from "lucide-react";
 import Hello from "./Hello";
 import About from "./About";
@@ -15,7 +14,7 @@ interface SidebarProps {
   onNavigateToBlog?: () => void;
 }
 
-export default function Sidebar({ onNavigateToBlog, currentPage }: SidebarProps & { currentPage?: string }) {
+export default function Sidebar({ onNavigateToBlog }: SidebarProps & { currentPage?: string }) {
 
   const helloRef = useRef<HTMLDivElement>(null);
   const aboutRef = useRef<HTMLDivElement>(null);
