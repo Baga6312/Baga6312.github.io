@@ -16,8 +16,7 @@ interface SidebarProps {
 }
 
 export default function Sidebar({ onNavigateToBlog, currentPage }: SidebarProps & { currentPage?: string }) {
-  const router = useRouter();
-  const pathname = usePathname();
+
   const helloRef = useRef<HTMLDivElement>(null);
   const aboutRef = useRef<HTMLDivElement>(null);
   const technologiesRef = useRef<HTMLDivElement>(null);
@@ -29,10 +28,6 @@ export default function Sidebar({ onNavigateToBlog, currentPage }: SidebarProps 
   const [activeSection, setActiveSection] = useState(0);
   const [sidebarVisible, setSidebarVisible] = useState(false);
   
-  // Check if we're on home page or not
-  const isHomePage = currentPage === "home" || !currentPage;
-
-  // IMPORTANT: This order must match the order of sections in the DOM below
   const navItems = [
     { icon: Home, label: "Home", ref: helloRef, hash: "hello" },
     { icon: Info, label: "About", ref: aboutRef, hash: "about" },
