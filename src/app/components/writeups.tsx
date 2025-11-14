@@ -14,7 +14,7 @@ export default function Writeups() {
   const [loading, setLoading] = useState(true);
   const [searchQuery, setSearchQuery] = useState("");
 
-  const GITHUB_REPO = "Baga6312/HTB-Writeups";
+  const GITHUB_REPO = "Baga6312/Writeups";
   const GITHUB_BRANCH = "main";
 
   useEffect(() => {
