@@ -18,7 +18,7 @@ const mockProjects: Project[] = [
     url: "https://github.com/Baga6312/projet-springboot-tuniway",
     language: "Java",
     commits: 7,
-    bgImage: "/tuniway.png",
+    bgImage: "/projects/tuniway.png",
   },
   {
     name: "WifiVisualizer",
