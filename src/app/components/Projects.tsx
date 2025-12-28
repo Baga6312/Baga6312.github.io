@@ -13,6 +13,14 @@ interface Project {
 
 const mockProjects: Project[] = [
   {
+    name: "Tuniway",
+    description: "Application web Spring Boot pour explorer les destinations touristiques et les points d'intérêt en Tunisie, avec navigation, recherche et informations détaillées sur les lieux.",
+    url: "https://github.com/Baga6312/projet-springboot-tuniway",
+    language: "Java",
+    commits: 7,
+    bgImage: "/tuniway.png",
+  },
+  {
     name: "WifiVisualizer",
     description: "Visualize WiFi networks in real-time",
     url: "https://github.com/Baga6312/WifiVisualizer",
