@@ -19,10 +19,10 @@ export default function Certifications() {
     { name: "SQL", category: "programming", image: "/tools/HackerRank.png", cert: "/certs/sql-cert.png" },
     { name: "React", category: "programming", image: "/tools/HackerRank.png", cert: "/certs/react-cert.png" },
     { name: "Node", category: "programming", image: "/tools/HackerRank.png", cert: "/certs/node-cert.png" },
-    { name: "FullStack", category: "Web Development", image: "/tools/ffc.png", cert: "/certs/ffc-fullstack.png" },
-    { name: "CyberSecurity", category: "CyberSec", image: "/tools/google.png", cert: "/certs/google-cybersec.jpeg" },
-    { name: "CyberSecurity", category: "CyberSec", image: "/tools/hackviser.jpg", cert: "/certs/capt_hackviser.jpg" },
-    { name: "CyberSecurity", category: "CyberSec", image: "/tools/hackandfix.png", cert: "/certs/cpps.jpg" },
+    { name: "Legacy FullStack", category: "Web Development", image: "/tools/ffc.png", cert: "/certs/ffc-fullstack.png" },
+    { name: "GCSP", category: "CyberSec", image: "/tools/google.png", cert: "/certs/google-cybersec.jpeg" },
+    { name: "CAPT", category: "CyberSec", image: "/tools/hackviser.jpg", cert: "/certs/capt_hackviser.jpg" },
+    { name: "CPPS", category: "CyberSec", image: "/tools/hackandfix.png", cert: "/certs/cpps.jpg" },
   ];
 
   const infiniteCerts = [...certifications, ...certifications, ...certifications];
