@@ -23,7 +23,8 @@ export default function Certifications() {
     { name: "GCSP", category: "CyberSec", image: "/tools/google.png", cert: "/certs/google-cybersec.jpeg" },
     { name: "CAPT", category: "CyberSec", image: "/tools/hackviser.jpg", cert: "/certs/capt_hackviser.jpg" },
     { name: "CPPS", category: "CyberSec", image: "/tools/hackandfix.png", cert: "/certs/cpps.jpg" },
-    { name: "EJPT", category: "CyberSec", image: "/certs/ine.png", cert: "/certs/ejpt.png" },
+    { name: "eJPT", category: "CyberSec", image: "/certs/ine.png", cert: "/certs/ejpt.png" },
+    { name: "eWPT", category: "CyberSec", image: "/certs/ine.png", cert: "/certs/ewpt.png" },
   ];
 
   const infiniteCerts = [...certifications, ...certifications, ...certifications];
