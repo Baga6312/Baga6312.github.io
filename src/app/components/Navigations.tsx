@@ -108,7 +108,7 @@ export default function Navigation() {
           <div key="blog" className="page-fade-in">
             <HomeButton />
             <Blog 
-              onNavigateToWriteups={() => navigateTo("writeups", "/htb-writeups")} 
+              onNavigateToWriteups={() => {window.open("https://baga6312.gitbook.io/writeups/", "_blank");}}
               onNavigateToPentesting={() => navigateTo("pentesting", "/pentesting-notes")}
               onNavigateToIOT={() => navigateTo("iot", "/iot-tool")}
             />
