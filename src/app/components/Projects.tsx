@@ -45,6 +45,14 @@ const mockProjects: Project[] = [
     bgImage: "/projects/wifivis-bg.png",
   },
   {
+    name: "Recouvra+",
+    description: "Recouvra+ est une API REST backend développée avec Node.js 22 et Express.js, permettant à une entreprise de gérer l'ensemble de son cycle de recouvrement: de la gestion des clients et des factures impayées jusqu'au suivi des actions de recouvrement et des statistiques. ",
+    url: "https://github.com/Baga6312/Recouvra-plus",
+    language: "Java",
+    commits: 34,
+    bgImage: "",
+  },
+  {
     name: "Dark-scarping",
     description: "Scrape data from darkweb",
     url: "https://github.com/Baga6312/Dark-scarping",
