@@ -27,6 +27,7 @@ export default function Certifications() {
     { name: "eWPT", category: "CyberSec", image: "/certs/ine.png", cert: "/certs/ewpt.png" },
     { name: "eWPTX", category: "CyberSec", image: "/certs/ine.png", cert: "/certs/ewptx.png" },
     { name: "eCPPT", category: "CyberSec", image: "/certs/ine.png", cert: "/certs/ecppt.png" },
+    { name: "CKA", category: "DevOps", image: "/certs/logo_cka_whitetext.png", cert: "/certs/cka.png" },
   ];
 
   const infiniteCerts = [...certifications, ...certifications, ...certifications];
