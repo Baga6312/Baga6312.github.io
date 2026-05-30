@@ -28,6 +28,7 @@ export default function Certifications() {
     { name: "eWPTX", category: "CyberSec", image: "/certs/ine.png", cert: "/certs/ewptx.png" },
     { name: "eCPPT", category: "CyberSec", image: "/certs/ine.png", cert: "/certs/ecppt.png" },
     { name: "CKA", category: "DevOps", image: "/certs/logo_cka_whitetext.png", cert: "/certs/cka.png" },
+    { name: "AWS CCP CLF-C02", category: "DevOps", image: "/certs/awsccp.png", cert: "" },
   ];
 
   const infiniteCerts = [...certifications, ...certifications, ...certifications];
