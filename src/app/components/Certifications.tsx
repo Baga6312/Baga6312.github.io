@@ -28,7 +28,7 @@ export default function Certifications() {
     { name: "eWPTX", category: "CyberSec", image: "/certs/ine.png", cert: "/certs/ewptx.png" },
     { name: "eCPPT", category: "CyberSec", image: "/certs/ine.png", cert: "/certs/ecppt.png" },
     { name: "CKA", category: "DevOps", image: "/certs/logo_cka_whitetext.png", cert: "/certs/cka.png" },
-    { name: "AWS CCP CLF-C02", category: "DevOps", image: "/certs/awsccp.png", cert: "https://www.credly.com/badges/9a0b0937-328d-4a1b-9042-302371264af9" },
+    { name: "AWS CCP CLF-C02", category: "DevOps", image: "/certs/awsccp.png", cert: "/certs/aws_ccp.jpg" },
   ];
 
   const infiniteCerts = [...certifications, ...certifications, ...certifications];
