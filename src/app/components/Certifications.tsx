@@ -29,6 +29,7 @@ export default function Certifications() {
     { name: "eCPPT", category: "CyberSec", image: "/certs/ine.png", cert: "/certs/ecppt.png" },
     { name: "CKA", category: "DevOps", image: "/certs/logo_cka_whitetext.png", cert: "/certs/cka.png" },
     { name: "AWS CCP CLF-C02", category: "DevOps", image: "/certs/awsccp.png", cert: "/certs/aws_ccp.jpg" },
+    { name: "AWS CCP CLF-C02", category: "DevOps", image: "/certs/AWS-SAA-C03-png.png", cert: "/certs/AWS-SAA-C03.png" },
     { name: "PCAP", category: "Programming", image: "/certs/PI.png", cert: "/certs/PCAP.jpg" },
   ];
 
