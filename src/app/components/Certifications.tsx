@@ -29,7 +29,6 @@ export default function Certifications() {
     { name: "eCPPT", category: "CyberSec", image: "/certs/ine.png", cert: "/certs/ecppt.png" },
     { name: "CKA", category: "DevOps", image: "/certs/logo_cka_whitetext.png", cert: "/certs/cka.png" },
     { name: "CKAD", category: "DevOps", image: "/certs/CKAD.png", cert: "/certs/CKAD-cert.png" },
-    { name: "CKAD", category: "DevOps", image: "/certs/CKAD.png", cert: "/certs/CKAD-cert.png" }
     { name: "CKS", category: "DevOps", image: "/certs/CKS.png", cert: "/certs/CKS-cert.png" },
     { name: "AWS CLF-C02", category: "DevOps", image: "/certs/awsccp.png", cert: "/certs/aws_ccp.jpg" },
     { name: "AWS SAA-C03 -", category: "DevOps", image: "/certs/AWS-SAA-C03-png.png", cert: "/certs/AWS-SAA-C03.png" },
